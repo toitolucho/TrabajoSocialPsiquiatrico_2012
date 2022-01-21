@@ -1,0 +1,1197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A4C30325-F948-4C6A-B729-DBD8F3D73BDE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SISTEMA_SEGUIMIENTO_SOCIAL</RootNamespace>
+    <AssemblyName>SISTEMA_SEGUIMIENTO_SOCIAL</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DSReportes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSReportes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSTrabajo_Social.cs">
+      <DependentUpon>DSTrabajo_Social.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DSTrabajo_Social.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSTrabajo_Social.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FAñadirOcupaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAñadirOcupaciones.Designer.cs">
+      <DependentUpon>FAñadirOcupaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FGeograficoBusqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FGeograficoBusqueda.Designer.cs">
+      <DependentUpon>FGeograficoBusqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRegistroActividadeDiariasAdministrativas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRegistroActividadeDiariasAdministrativas.Designer.cs">
+      <DependentUpon>FRegistroActividadeDiariasAdministrativas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAutenticación.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAutenticación.Designer.cs">
+      <DependentUpon>FAutenticación.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAñadirActividadesTipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAñadirActividadesTipo.Designer.cs">
+      <DependentUpon>FAñadirActividadesTipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAñadirDatosPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAñadirDatosPersona.Designer.cs">
+      <DependentUpon>FAñadirDatosPersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAñadirServicioBrindado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAñadirServicioBrindado.Designer.cs">
+      <DependentUpon>FAñadirServicioBrindado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAñadirCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAñadirCategoria.Designer.cs">
+      <DependentUpon>FAñadirCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FBuscarPacientesOperaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FBuscarPacientesOperaciones.Designer.cs">
+      <DependentUpon>FBuscarPacientesOperaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCambiarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCambiarContraseña.designer.cs">
+      <DependentUpon>FCambiarContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAñadirDocumentosTipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAñadirDocumentosTipo.Designer.cs">
+      <DependentUpon>FAñadirDocumentosTipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAñadirServicioSolicitado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAñadirServicioSolicitado.Designer.cs">
+      <DependentUpon>FAñadirServicioSolicitado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FFamiliaresPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFamiliaresPaciente.Designer.cs">
+      <DependentUpon>FFamiliaresPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FFichaSocial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFichaSocial.Designer.cs">
+      <DependentUpon>FFichaSocial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FGeografico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FGeografico.designer.cs">
+      <DependentUpon>FGeografico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FInformeSocial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FInformeSocial.Designer.cs">
+      <DependentUpon>FInformeSocial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FKardex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FKardex.Designer.cs">
+      <DependentUpon>FKardex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FGestionarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FGestionarUsuarios.Designer.cs">
+      <DependentUpon>FGestionarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPagoServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPagoServicio.Designer.cs">
+      <DependentUpon>FPagoServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAñadirParentesco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAñadirParentesco.Designer.cs">
+      <DependentUpon>FAñadirParentesco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAñadirPreguntaValoración.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAñadirPreguntaValoración.Designer.cs">
+      <DependentUpon>FAñadirPreguntaValoración.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRepActividadesDiarias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRepActividadesDiarias.designer.cs">
+      <DependentUpon>FRepActividadesDiarias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRepAdmisionPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRepAdmisionPacientes.designer.cs">
+      <DependentUpon>FRepAdmisionPacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRepDocumentoPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRepDocumentoPaciente.designer.cs">
+      <DependentUpon>FRepDocumentoPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRepFugasEvasiones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRepFugasEvasiones.designer.cs">
+      <DependentUpon>FRepFugasEvasiones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRepInformesSociales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRepInformesSociales.designer.cs">
+      <DependentUpon>FRepInformesSociales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRepIngresosAltasReingresos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRepIngresosAltasReingresos.designer.cs">
+      <DependentUpon>FRepIngresosAltasReingresos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRepInterconsultaRealizada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRepInterconsultaRealizada.designer.cs">
+      <DependentUpon>FRepInterconsultaRealizada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRepListadoPacientesFallecidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRepListadoPacientesFallecidos.designer.cs">
+      <DependentUpon>FRepListadoPacientesFallecidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FReporteDocumentosPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FReporteDocumentosPacientes.designer.cs">
+      <DependentUpon>FReporteDocumentosPacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FReportePacientesDiscapacitados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FReportePacientesDiscapacitados.Designer.cs">
+      <DependentUpon>FReportePacientesDiscapacitados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FReportePacientesSeguimientoSocial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FReportePacientesSeguimientoSocial.Designer.cs">
+      <DependentUpon>FReportePacientesSeguimientoSocial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRepPacientesExternos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRepPacientesExternos.designer.cs">
+      <DependentUpon>FRepPacientesExternos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRepPacientesInstitucionalizados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRepPacientesInstitucionalizados.designer.cs">
+      <DependentUpon>FRepPacientesInstitucionalizados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRepPacientesRecibieronEncomienda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRepPacientesRecibieronEncomienda.designer.cs">
+      <DependentUpon>FRepPacientesRecibieronEncomienda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRepPacientesTipoDiscapacidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRepPacientesTipoDiscapacidad.designer.cs">
+      <DependentUpon>FRepPacientesTipoDiscapacidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRegistroActividadesDiariasPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRegistroActividadesDiariasPacientes.Designer.cs">
+      <DependentUpon>FRegistroActividadesDiariasPacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRepServiciosBrindados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRepServiciosBrindados.designer.cs">
+      <DependentUpon>FRepServiciosBrindados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRepUbicacionPacHospitalizados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRepUbicacionPacHospitalizados.designer.cs">
+      <DependentUpon>FRepUbicacionPacHospitalizados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesCR\CRAdmisionPacientes1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRAdmisionPacientes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRInformeSociales1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRInformeSociales.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRInterConsultasRealizadas1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRInterConsultasRealizadas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRListadoPacientesHospitalizados.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListadoPacientesHospitalizados.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRListadoPacMujeresInternados1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListadoPacMujeresInternados.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRListadoPacVaronesInternados1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListadoPacVaronesInternados.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRListaPacientesInterconsultados1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListaPacientesInterconsultados.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRListarActividadesAdministrativas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarActividadesAdministrativas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRListarActividadesPorUsuarioReporte1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarActividadesPorUsuarioReporte.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRListarAltasMensuales1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarAltasMensuales.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRListarCantidadActividadesTipoPorMes1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarCantidadActividadesTipoPorMes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRListarCantidadSubvencionSocialPorServicio1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarCantidadSubvencionSocialPorServicio.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRListarDatosPacienteReporte.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarDatosPacienteReporte.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRListarInformeSocialReporte.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarInformeSocialReporte.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRListarIngresosReingresosMensuales1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarIngresosReingresosMensuales.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRListarMovimientoResumen1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarMovimientoResumen.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRListarPacExternosServicios1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarPacExternosServicios.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRListarPacientesExternos1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarPacientesExternos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRListarPacientesHospitalizadosSimple.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarPacientesHospitalizadosSimple.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRListarPacientesInternados1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarPacientesInternados.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRListarPacientesReingreso1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarPacientesReingreso.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRListarPacInternosServicios1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarPacInternosServicios.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRListarPacPorUnidad1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarPacPorUnidad.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRListarPacProcedenciaInterior1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarPacProcedenciaInterior.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRListarPagosServicios.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarPagosServicios.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRListarPersonas1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarPersonas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRListarReferencias2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarReferencias2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRListarReferenciasContraReferencia.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarReferenciasContraReferencia.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRListarReferenciasMensuales1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarReferenciasMensuales.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRListarReingresos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarReingresos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRListarSeguimientoAnualReporte.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarSeguimientoAnualReporte.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRListarSeguimientoSocialPaciente.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarSeguimientoSocialPaciente.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRPacienteKardex1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRPacienteKardex.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRPacientesDiscapacitados1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRPacientesDiscapacitados.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRPacientesDocumentos1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRPacientesDocumentos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CRPacientesSeguimientoSocial1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRPacientesSeguimientoSocial.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\CrystalReport11.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportesCR\ListarPacProcedenciaChuquisaca1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListarPacProcedenciaChuquisaca.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\FReporteActividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FReporteActividades.Designer.cs">
+      <DependentUpon>FReporteActividades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FReporteAdmisionPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FReporteAdmisionPacientes.Designer.cs">
+      <DependentUpon>FReporteAdmisionPacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FReporteFormulariosIndividuales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FReporteFormulariosIndividuales.Designer.cs">
+      <DependentUpon>FReporteFormulariosIndividuales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FReporteGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FReporteGeneral.designer.cs">
+      <DependentUpon>FReporteGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FReingreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FReingreso.Designer.cs">
+      <DependentUpon>FReingreso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPrincipal.Designer.cs">
+      <DependentUpon>FPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FNivelSocioEconomico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FNivelSocioEconomico.Designer.cs">
+      <DependentUpon>FNivelSocioEconomico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDocumentos.Designer.cs">
+      <DependentUpon>FDocumentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FBusquedaPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FBusquedaPacientes.Designer.cs">
+      <DependentUpon>FBusquedaPacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRepValoracionSocioeconomica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRepValoracionSocioeconomica.designer.cs">
+      <DependentUpon>FRepValoracionSocioeconomica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSeguimientoServicioSocial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSeguimientoServicioSocial.Designer.cs">
+      <DependentUpon>FSeguimientoServicioSocial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRegistroPacientesExternos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRegistroPacientesExternos.Designer.cs">
+      <DependentUpon>FRegistroPacientesExternos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FReferencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FReferencia.Designer.cs">
+      <DependentUpon>FReferencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAñadirInstitución.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAñadirInstitución.Designer.cs">
+      <DependentUpon>FAñadirInstitución.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FContrarreferencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FContrarreferencia.Designer.cs">
+      <DependentUpon>FContrarreferencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\FReporteInformeSociales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FReporteInformeSociales.Designer.cs">
+      <DependentUpon>FReporteInformeSociales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FReporteIngresosAltasReingresos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FReporteIngresosAltasReingresos.Designer.cs">
+      <DependentUpon>FReporteIngresosAltasReingresos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FReporteInterConsultasRealizadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FReporteInterConsultasRealizadas.Designer.cs">
+      <DependentUpon>FReporteInterConsultasRealizadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FReporteListarMovimientoResumen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FReporteListarMovimientoResumen.Designer.cs">
+      <DependentUpon>FReporteListarMovimientoResumen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FReportesAdmisionPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FReportesAdmisionPacientes.Designer.cs">
+      <DependentUpon>FReportesAdmisionPacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilidades\Componentes\DataGridViewSort.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utilidades\Componentes\SortableBindingList.cs" />
+    <Compile Include="Utilidades\EventosValidacionTexto.cs" />
+    <Compile Include="Utilidades\ObjetoCodigoDescripcion.cs" />
+    <EmbeddedResource Include="FCambiarContraseña.resx">
+      <DependentUpon>FCambiarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAñadirOcupaciones.resx">
+      <DependentUpon>FAñadirOcupaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FGeograficoBusqueda.resx">
+      <DependentUpon>FGeograficoBusqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRegistroActividadeDiariasAdministrativas.resx">
+      <DependentUpon>FRegistroActividadeDiariasAdministrativas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAutenticación.resx">
+      <DependentUpon>FAutenticación.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAñadirActividadesTipo.resx">
+      <DependentUpon>FAñadirActividadesTipo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAñadirDatosPersona.resx">
+      <DependentUpon>FAñadirDatosPersona.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAñadirServicioBrindado.resx">
+      <DependentUpon>FAñadirServicioBrindado.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAñadirInstitución.resx">
+      <DependentUpon>FAñadirInstitución.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAñadirCategoria.resx">
+      <DependentUpon>FAñadirCategoria.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FBuscarPacientesOperaciones.resx">
+      <DependentUpon>FBuscarPacientesOperaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FContrarreferencia.resx">
+      <DependentUpon>FContrarreferencia.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDocumentos.resx">
+      <DependentUpon>FDocumentos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAñadirDocumentosTipo.resx">
+      <DependentUpon>FAñadirDocumentosTipo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAñadirServicioSolicitado.resx">
+      <DependentUpon>FAñadirServicioSolicitado.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFamiliaresPaciente.resx">
+      <DependentUpon>FFamiliaresPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFichaSocial.resx">
+      <DependentUpon>FFichaSocial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FGeografico.resx">
+      <DependentUpon>FGeografico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FInformeSocial.resx">
+      <DependentUpon>FInformeSocial.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FKardex.resx">
+      <DependentUpon>FKardex.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FGestionarUsuarios.resx">
+      <DependentUpon>FGestionarUsuarios.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPagoServicio.resx">
+      <DependentUpon>FPagoServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAñadirParentesco.resx">
+      <DependentUpon>FAñadirParentesco.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAñadirPreguntaValoración.resx">
+      <DependentUpon>FAñadirPreguntaValoración.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRepActividadesDiarias.resx">
+      <DependentUpon>FRepActividadesDiarias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRepAdmisionPacientes.resx">
+      <DependentUpon>FRepAdmisionPacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRepDocumentoPaciente.resx">
+      <DependentUpon>FRepDocumentoPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRepFugasEvasiones.resx">
+      <DependentUpon>FRepFugasEvasiones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRepInformesSociales.resx">
+      <DependentUpon>FRepInformesSociales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRepIngresosAltasReingresos.resx">
+      <DependentUpon>FRepIngresosAltasReingresos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRepInterconsultaRealizada.resx">
+      <DependentUpon>FRepInterconsultaRealizada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRepListadoPacientesFallecidos.resx">
+      <DependentUpon>FRepListadoPacientesFallecidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRepPacientesExternos.resx">
+      <DependentUpon>FRepPacientesExternos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRepPacientesInstitucionalizados.resx">
+      <DependentUpon>FRepPacientesInstitucionalizados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRepPacientesRecibieronEncomienda.resx">
+      <DependentUpon>FRepPacientesRecibieronEncomienda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRepPacientesTipoDiscapacidad.resx">
+      <DependentUpon>FRepPacientesTipoDiscapacidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRegistroActividadesDiariasPacientes.resx">
+      <DependentUpon>FRegistroActividadesDiariasPacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRepServiciosBrindados.resx">
+      <DependentUpon>FRepServiciosBrindados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRepUbicacionPacHospitalizados.resx">
+      <DependentUpon>FRepUbicacionPacHospitalizados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRAdmisionPacientes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRAdmisionPacientes1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRInformeSociales.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRInformeSociales1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRInterConsultasRealizadas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRInterConsultasRealizadas1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRListadoPacientesHospitalizados.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListadoPacientesHospitalizados.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRListadoPacMujeresInternados.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListadoPacMujeresInternados1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRListadoPacVaronesInternados.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListadoPacVaronesInternados1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRListaPacientesInterconsultados.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListaPacientesInterconsultados1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRListarActividadesAdministrativas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarActividadesAdministrativas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRListarActividadesPorUsuarioReporte.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarActividadesPorUsuarioReporte1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRListarAltasMensuales.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarAltasMensuales1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRListarCantidadActividadesTipoPorMes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarCantidadActividadesTipoPorMes1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRListarCantidadSubvencionSocialPorServicio.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarCantidadSubvencionSocialPorServicio1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRListarDatosPacienteReporte.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarDatosPacienteReporte.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRListarInformeSocialReporte.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarInformeSocialReporte.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRListarIngresosReingresosMensuales.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarIngresosReingresosMensuales1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRListarMovimientoResumen.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarMovimientoResumen1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRListarPacExternosServicios.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarPacExternosServicios1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRListarPacientesExternos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarPacientesExternos1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRListarPacientesHospitalizadosSimple.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarPacientesHospitalizadosSimple.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRListarPacientesInternados.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarPacientesInternados1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRListarPacientesReingreso.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarPacientesReingreso1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRListarPacInternosServicios.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarPacInternosServicios1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRListarPacPorUnidad.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarPacPorUnidad1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRListarPacProcedenciaInterior.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarPacProcedenciaInterior1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRListarPagosServicios.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarPagosServicios.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRListarPersonas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarPersonas1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRListarReferencias2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarReferencias2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRListarReferenciasContraReferencia.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarReferenciasContraReferencia.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRListarReferenciasMensuales.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarReferenciasMensuales1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRListarReingresos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarReingresos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRListarSeguimientoAnualReporte.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarSeguimientoAnualReporte.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRListarSeguimientoSocialPaciente.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarSeguimientoSocialPaciente.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRPacienteKardex.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRPacienteKardex1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRPacientesDiscapacitados.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRPacientesDiscapacitados1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRPacientesDocumentos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRPacientesDocumentos1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CRPacientesSeguimientoSocial.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRPacientesSeguimientoSocial1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport11.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCR\ListarPacProcedenciaChuquisaca.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ListarPacProcedenciaChuquisaca1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FReporteGeneral.resx">
+      <DependentUpon>FReporteGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPrincipal.resx">
+      <DependentUpon>FPrincipal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FNivelSocioEconomico.resx">
+      <DependentUpon>FNivelSocioEconomico.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FBusquedaPacientes.resx">
+      <DependentUpon>FBusquedaPacientes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReferencia.resx">
+      <DependentUpon>FReferencia.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReingreso.resx">
+      <DependentUpon>FReingreso.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRepValoracionSocioeconomica.resx">
+      <DependentUpon>FRepValoracionSocioeconomica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSeguimientoServicioSocial.resx">
+      <DependentUpon>FSeguimientoServicioSocial.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRegistroPacientesExternos.resx">
+      <DependentUpon>FRegistroPacientesExternos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="DSReportes.xsc">
+      <DependentUpon>DSReportes.xsd</DependentUpon>
+    </None>
+    <None Include="DSReportes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSReportes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSReportes.xss">
+      <DependentUpon>DSReportes.xsd</DependentUpon>
+    </None>
+    <None Include="DSTrabajo_Social.xsc">
+      <DependentUpon>DSTrabajo_Social.xsd</DependentUpon>
+    </None>
+    <None Include="DSTrabajo_Social.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSTrabajo_Social.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSTrabajo_Social.xss">
+      <DependentUpon>DSTrabajo_Social.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XP-Gloss_Orange_1200.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\titulo copiar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agua y luz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\luz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agua.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\familia.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\principal2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondoazul.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AZULITOULTIMO.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\principal1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\franjaAzulnuevo.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ultimaFranja.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\docmentitos.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Seguimiento anual Servicio social.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Seguimiento anual Servicio social1.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Seguimiento anual Servicio social2.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sucre 2.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen 026.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen 0261.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agt_web.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RocketDock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Doctor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agt_web1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail_find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dupe Trasher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UFranjita.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\playlist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\demo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\viewmag.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
